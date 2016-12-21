@@ -1,0 +1,57 @@
+body { 
+	margin:0;
+ 	padding:0; 
+}
+#mapid { 
+	position:absolute; 
+	top:0; 
+	bottom:0; 
+	width:100%; 
+}
+h2{
+	font-size: 2em;
+	font-family: Verdana, Ariel, San-serif;
+	font-style: italic;
+}
+
+ul {
+	list-style: none;
+}
+
+#log{
+	height: 30px; 
+    width: 30px; 
+    max-width: 200px; 
+    max-height: 200px;
+}
+
+.nav-header {
+	margin-bottom: 100px;
+	font-size: 1.75em;
+	font-family: Verdana, Ariel, San-serif;
+	font-style: initial;
+}
+
+li{
+	background-color: black;
+	font-size: 1.25em;
+	font-family: Verdana, Ariel, San-serif;
+	font-style: normal;
+}
+
+li:hover{
+	background-color: #dbe3e6;
+	font-size: 1.25em;
+	font-family: Verdana, Ariel, San-serif;
+}
+
+.highlight_stay {
+	background-color: #dbe3e6;
+	font-size: 1.25em;
+	font-family: Verdana, Ariel, San-serif;
+	font-style: italic;
+}
+
+img{
+	margin-right: 10px;
+}
