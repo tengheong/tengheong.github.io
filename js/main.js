@@ -33,18 +33,25 @@ var sidebar = L.control.sidebar("sidebar", {
     position: "left"
 });
 
+map.addControl(sidebar);
+
+// Show sidebar after timeout
+setTimeout(function () {
+    sidebar.show();
+}, 500);
+
 var sidebarContent = "<br>" +
     "<center><a href='http://sustainability.wisc.edu/' target='_blank'><img id='logo' src='img/sustainabilitylogo.png' alt='Office of Sustianiblity logo' height='200px' width='330px'></a></center>" +
     "<br>" +
     "<br>" +
-	"<h2>“The University of Wisconsin–Madison will be a living model for sustainability, exemplifying values and actions that demonstrate our commitment to stewardship of resources, respect for place and the health and well–being of the broader community, now and for the future.”</h2>" +
-	"<p>— Sustainability Initiative Task Force Final Report, 2010</p>"+
-	"<br>" +
-	"<p> Let's take a visual sustainability tour around the campus!</p>"+
-	"<br>" +
+    "<h2>“The University of Wisconsin–Madison will be a living model for sustainability, exemplifying values and actions that demonstrate our commitment to stewardship of resources, respect for place and the health and well–being of the broader community, now and for the future.”</h2>" +
+    "<p>— Sustainability Initiative Task Force Final Report, 2010</p>"+
+    "<br>" +
+    "<p> Let's take a visual sustainability tour around the campus!</p>"+
+    "<br>" +
     "<div>" +
         "<ul class='list-group checked-list-box'>" +
-		    // Physcial environment
+            // Physcial environment
             "<i class='nav-header'>Physical Environment</i>" +
             "<li id='LEED' class='list-group-item'> <img src='img/leedcertified.png' alt='LEED Certified Building' height='36px' width='36px' position='right'>LEED Certified Building</li>" +
             "<li id='HVAC' class='list-group-item'> <img src='img/HVAC.png' alt='HVAC Upgraded Building' height='36px' width='36px' position='right'>HVAC Upgraded Building</li>" +
@@ -52,7 +59,7 @@ var sidebarContent = "<br>" +
             "<li id='gardenPlot' class='list-group-item'> <img src='img/gardenplot.png' alt='Garden Plots' height='36px' width='36px' position='right'>Garden Plots</li>" +
 
             // Transportation
-			"<br >" +
+            "<br >" +
             "<i class='nav-header'>Transportation</i>" +
             "<li id='biking' class='list-group-item'> <img src='img/bcycle.png' alt='bcycle' height='36px' width='36px' position='right'>Bcycle </li>" +
             "<li id='bikeLocker' class='list-group-item'><img src='img/bikelocker.png' alt='bikelocker' height='36px' width='36px' position='right'>Bike locker</li>" +
@@ -60,7 +67,7 @@ var sidebarContent = "<br>" +
             "<li id='bikeRepair' class='list-group-item'><img src='img/bikeresource.png' alt='university bike resource center' height='36px' width='36px' position='right'>University bike and repair center</li>" +
 
             // Waste management
-			"<br >" +
+            "<br >" +
             "<i class='nav-header'>Waste Management</i>" +
             "<li id='composting' class='list-group-item'> <img src='img/bcycle.png' alt='Composting' height='36px' width='36px' position='right'>Composting</li>" +
             "<li id='recycleClothes' class='list-group-item'><img src='img/recycleclothes.png' alt='Clothes and Shoes Donation' height='36px' width='36px' position='right'>Clothes and Shoes Donation</li>" +
@@ -70,22 +77,17 @@ var sidebarContent = "<br>" +
             "<li id='weTrade' class='list-group-item'><img src='img/wetrade.png' alt='We-trade' height='36px' width='36px' position='right'>We-trade</li>" +
             "<li id='disposal' class='list-group-item'><img src='img/chemical.png' alt='Disposal Serves (EHS)' height='36px' width='36px' position='right'>Disposal Serves (EHS)</li>" +
             "<li id='recyclopedia' class='list-group-item'><img src='img/recyclopedia.png' alt='Recyclopedia (EHS)' height='36px' width='36px' position='right'>Recyclopedia (EHS)</li>" +
-			
-			// Education
-			"<br >" +
+
+            // Education
+            "<br >" +
             "<i class='nav-header'>Education</i>" +
             "<li id='education' class='list-group-item'><img src='img/education.png' alt='Education' height='36px' width='36px' position='right'>Education</li>" +
         "</ul>" +
-		"<p>Credits: Icon is modified from the <a href='https://thenounproject.com/' target='_blank'>Noun Project</a></p>" +
-		"<p>Created by <a href='https://tengheong.wordpress.com/' target='_blank'>Teng Heong Ng</a></p>" +
+        "<p>Credits: Icon is modified from the <a href='https://thenounproject.com/' target='_blank'>Noun Project</a></p>" +
+        "<p>Created by <a href='https://tengheong.wordpress.com/' target='_blank'>Teng Heong Ng</a></p>" +
     "</div>";
 sidebar.setContent(sidebarContent);
-map.addControl(sidebar);
 
-// Show sidebar after timeout
-setTimeout(function () {
-    sidebar.show();
-}, 500);
 
 /**
 * Physical Environment
@@ -101,7 +103,7 @@ var LEED1 = L.marker([43.071198, -89.411066], {icon: silverLEEDIcon}).bindPopup(
     LEED3 = L.marker([43.078286, -89.431595], {icon: silverLEEDIcon}).bindPopup(" Tracking LEED Silver Certified: Wisconsin Institutes for Medical Research Phase II" + "<br>" + "<img src='img/WIMR.jpg' height='200px' width='250px'>" + "<br>" + "<a href='' target='_blank' >More Details</a>"),
     LEED4 = L.marker([43.075632, -89.433078], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: UW Medical Foundation Centennial Building" + "<br>" + "<img src='img/uwmedical.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/UW-Medical-Foundation-Centennial-Building.htm' target='_blank' >More Details</a>"),
     LEED5 = L.marker([43.073078, -89.407884], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Wisconsin Institutes for Discovery" + "<br>" + "<img src='img/WID.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Wisconsin-Institutes-for-Discovery.htm' target='_blank' >More Details</a>"
-	),
+    ),
     LEED6 = L.marker([43.071999, -89.407822], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Union South" + "<br>" + "<img src='img/unionsouth.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Union-South.htm' target='_blank' >More Details</a>"),
     LEED7 = L.marker([43.075925, -89.408716], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Nancy Nicholas Hall" + "<br>" + "<img src='img/nancy.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Nancy-Nicholas-Hall.htm' target='_blank' >More Details</a>"),
     LEED8 = L.marker([43.073932, -89.413992], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Wisconsin Energy Institute" + "<br>" + "<img src='img/WEI.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Wisconsin-Energy-Institute.htm' target='_blank' >More Details</a>"),
@@ -115,31 +117,31 @@ var hvacIcon = new MarkerIcon({iconUrl: "img/HVAC.png"});
 
 var hvac1 = L.marker([43.075979, -89.422589], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Biotron" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
     hvac2 = L.marker([43.074848, -89.411100], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Bock labs" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
-	hvac3 = L.marker([43.073881, -89.409463], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: University of Wisconsin Biotechnology" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
-	hvac4 = L.marker([43.072656, -89.413430], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Engineering Centers Building" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
-	hvac5 = L.marker([43.072523, -89.404564], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Chemistry Building" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
-	hvac6 = L.marker([43.071763, -89.410302], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Engineering Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
-	hvac7 = L.marker([43.078449, -89.428089], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Rennebohm Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
-	hvac8 = L.marker([43.073987, -89.405795], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Chamberlin Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
-	HVAC = L.layerGroup([hvac1,hvac2,hvac3,hvac4,hvac5,hvac6,hvac7,hvac8]);
+    hvac3 = L.marker([43.073881, -89.409463], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: University of Wisconsin Biotechnology" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
+    hvac4 = L.marker([43.072656, -89.413430], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Engineering Centers Building" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
+    hvac5 = L.marker([43.072523, -89.404564], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Chemistry Building" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
+    hvac6 = L.marker([43.071763, -89.410302], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Engineering Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
+    hvac7 = L.marker([43.078449, -89.428089], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Rennebohm Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
+    hvac8 = L.marker([43.073987, -89.405795], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Chamberlin Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
+    HVAC = L.layerGroup([hvac1,hvac2,hvac3,hvac4,hvac5,hvac6,hvac7,hvac8]);
 
 // roofGarden
 var roofGardenIcon = new MarkerIcon({iconUrl: "img/roofgarden.png"});
 
 var roof1 = L.marker([43.076184, -89.397765], {icon: roofGardenIcon}).bindPopup("FH King green roof at Pyle Center" + "<br>" + "<a href='https://allencentennialgarden.org/explore_blog.php?id=53' target='_blank' >More Details</a>"),
     roof2 = L.marker([43.075749, -89.412105], {icon: roofGardenIcon}).bindPopup("Microbial Sciences Green Roofs" + "<br>" + "<a href='https://allencentennialgarden.org/explore_blog.php?id=53' target='_blank' >More Details</a>"),
-	roof3 = L.marker([43.071248, -89.398557], {icon: roofGardenIcon}).bindPopup("Gordon Event Center Green Roof" + "<br>" + "<a href='https://allencentennialgarden.org/explore_blog.php?id=53' target='_blank' >More Details</a>"),
-	roof4 = L.marker([43.075750, -89.402272], {icon: roofGardenIcon}).bindPopup("Education Building 3rd floor Green Roof AND Green Roof plaza" + "<br>" + "<a href='https://allencentennialgarden.org/explore_blog.php?id=53' target='_blank' >More Details</a>"),
-	roof5 = L.marker([43.075706, -89.408802], {icon: roofGardenIcon}).bindPopup("Nancy Nicholas Hall Green Roofs" + "<br>" + "<a href='http://fhkingstudents.wixsite.com/fhking/rooftop-garden' target='_blank' >More Details</a>"),
-	roofGarden = L.layerGroup([roof1,roof2,roof3,roof4,roof5]);
+    roof3 = L.marker([43.071248, -89.398557], {icon: roofGardenIcon}).bindPopup("Gordon Event Center Green Roof" + "<br>" + "<a href='https://allencentennialgarden.org/explore_blog.php?id=53' target='_blank' >More Details</a>"),
+    roof4 = L.marker([43.075750, -89.402272], {icon: roofGardenIcon}).bindPopup("Education Building 3rd floor Green Roof AND Green Roof plaza" + "<br>" + "<a href='https://allencentennialgarden.org/explore_blog.php?id=53' target='_blank' >More Details</a>"),
+    roof5 = L.marker([43.075706, -89.408802], {icon: roofGardenIcon}).bindPopup("Nancy Nicholas Hall Green Roofs" + "<br>" + "<a href='http://fhkingstudents.wixsite.com/fhking/rooftop-garden' target='_blank' >More Details</a>"),
+    roofGarden = L.layerGroup([roof1,roof2,roof3,roof4,roof5]);
 
 // Garden plot
 var gardenIcon = new MarkerIcon({iconUrl: "img/gardenplot.png"});
 
 var garden1 = L.marker([43.087558, -89.432083], {icon: gardenIcon}).bindPopup("Eagle Heights Community Gardens" + "<br>" + "<a href='http://www.eagleheightsgardens.org/' target='_blank' >More Details</a>"),
     garden2 = L.marker([43.083008, -89.443748], {icon: gardenIcon}).bindPopup("University Community Gardens" + "<br>" + "<a href='http://www.eagleheightsgardens.org/' target='_blank' >More Details</a>"),
-	garden3 = L.marker([43.076184, -89.397765], {icon: gardenIcon}).bindPopup("FH King Rooftop Garden" + "<br>" + "<a href='http://fhkingstudents.wixsite.com/fhking/rooftop-garden' target='_blank' >More Details</a>"),
-	gardenPlot = L.layerGroup([garden1,garden2,garden3]);
+    garden3 = L.marker([43.076184, -89.397765], {icon: gardenIcon}).bindPopup("FH King Rooftop Garden" + "<br>" + "<a href='http://fhkingstudents.wixsite.com/fhking/rooftop-garden' target='_blank' >More Details</a>"),
+    gardenPlot = L.layerGroup([garden1,garden2,garden3]);
 
 /**
 * Transportation
@@ -205,80 +207,80 @@ var compostIcon = new MarkerIcon({iconUrl: "img/bikeresource.png"});
 
 var compost1 = L.marker([43.079622, -89.428863], {icon: compostIcon}).bindPopup("Campus Compost Bin: Parking Lot 76" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
     compost2 = L.marker([43.079763, -89.4263559], {icon: compostIcon}).bindPopup("Campus Compost Bin: Parking Lot 60" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
-	compost3 = L.marker([43.075929, -89.401315], {icon: compostIcon}).bindPopup("Campus Compost Bin: Parking Lot 9" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
-	compost4 = L.marker([43.076055, -89.420443], {icon: compostIcon}).bindPopup("Campus Compost Bin: Parking Lot 62" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
-	compost5 = L.marker([43.077908, -89.417741], {icon: compostIcon}).bindPopup("Dejope Dining Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
-	compost6 = L.marker([43.071186, -89.398566], {icon: compostIcon}).bindPopup("Gordon Commons" + "<br>" + "<a href='' target='_blank' >More Details</a>"),
-	compost7 = L.marker([43.073800, -89.402095], {icon: compostIcon}).bindPopup("Rhetas" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank'>More Details</a>"),
-	compost8 = L.marker([43.077146, -89.411234], {icon: compostIcon}).bindPopup("Carson Gulley" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
-	composting = L.layerGroup([compost1,compost2,compost3,compost4,compost5,compost6,compost7,compost8]);
+    compost3 = L.marker([43.075929, -89.401315], {icon: compostIcon}).bindPopup("Campus Compost Bin: Parking Lot 9" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
+    compost4 = L.marker([43.076055, -89.420443], {icon: compostIcon}).bindPopup("Campus Compost Bin: Parking Lot 62" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
+    compost5 = L.marker([43.077908, -89.417741], {icon: compostIcon}).bindPopup("Dejope Dining Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
+    compost6 = L.marker([43.071186, -89.398566], {icon: compostIcon}).bindPopup("Gordon Commons" + "<br>" + "<a href='' target='_blank' >More Details</a>"),
+    compost7 = L.marker([43.073800, -89.402095], {icon: compostIcon}).bindPopup("Rhetas" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank'>More Details</a>"),
+    compost8 = L.marker([43.077146, -89.411234], {icon: compostIcon}).bindPopup("Carson Gulley" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
+    composting = L.layerGroup([compost1,compost2,compost3,compost4,compost5,compost6,compost7,compost8]);
 
 // Clothes Donation
 var recycleClothesIcon = new MarkerIcon({iconUrl: "img/recycleclothes.png"}),
     recycleShoeIcon = new MarkerIcon({iconUrl: "img/shoe.png"});
- 
+
 var clothes1 = L.marker([43.077098, -89.419928], {icon: recycleClothesIcon}).bindPopup("UW Clothing Drop-off Site: UW Natatorium" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
     clothes2 = L.marker([43.076833, -89.401450], {icon: recycleShoeIcon}).bindPopup(" Shoes Recycle: Helen C. White" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	clothes3 = L.marker([43.070407, -89.398350], {icon: recycleShoeIcon}).bindPopup("Shoes Recycle: Southeast Recreational Facility (SERF)" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    clothes3 = L.marker([43.070407, -89.398350], {icon: recycleShoeIcon}).bindPopup("Shoes Recycle: Southeast Recreational Facility (SERF)" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
 
-	recycleClothes = L.layerGroup([clothes1,clothes2,clothes3]);
+    recycleClothes = L.layerGroup([clothes1,clothes2,clothes3]);
 
 // Recycle Electronics
 var eWasteIcon = new MarkerIcon({iconUrl: "img/recycleelectronic.png"});
- 
+
 var eWaste1 = L.marker([43.071999, -89.407822], {icon: eWasteIcon}).bindPopup("Located below the main staircase. Acceptable Recyclables:Ink Cartridges, Batteries (any types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
     eWaste2 = L.marker([43.071763, -89.410302], {icon: eWasteIcon}).bindPopup("Located in loading dock. (soon to be moved)Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='' target='_blank' >More Details</a>"),
-	eWaste3 = L.marker([43.072870, -89.401506], {icon: eWasteIcon}).bindPopup("Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste4 = L.marker([43.070407, -89.398350], {icon: eWasteIcon}).bindPopup("Located to the left upon entrance. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste5 = L.marker([43.075910, -89.412248], {icon: eWasteIcon}).bindPopup("Acceptable Recyclables:Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='' target='_blank' >More Details</a>"),
-	eWaste6 = L.marker([43.075403, -89.420198], {icon: eWasteIcon}).bindPopup("Located on the second floor across from the lounge. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste7 = L.marker([43.076833, -89.401450], {icon: eWasteIcon}).bindPopup("Located outside to the left of the main entrance. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Large E-Waste, Clothes" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste8 = L.marker([43.075634, -89.402260], {icon: eWasteIcon}).bindPopup("Located on the main floor across from the cafe. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste9 = L.marker([43.072451, -89.398530], {icon: eWasteIcon}).bindPopup("Located to the left once you enter the first set of doors. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste10 = L.marker([43.068433, -89.399941], {icon: eWasteIcon}).bindPopup("Located on the first floor before the elevators. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste"),
-	eWaste11 = L.marker([43.076492, -89.399774], {icon: eWasteIcon}).bindPopup("Acceptable Recyclables: Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste12 = L.marker([43.072720, -89.404678], {icon: eWasteIcon}).bindPopup("Located outside the main lecture halls on first floor. Acceptable Recyclables: Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste13 = L.marker([43.074335, -89.411078], {icon: eWasteIcon}).bindPopup("Located in the Biochemistry research building. Go through the main doors go straight back and take a right into a closed door area." + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste14 = L.marker([43.069004, -89.404387], {icon: eWasteIcon}).bindPopup("Located in the workshop area on the main floor next to the various item vending machines. Batteries, Eyeglasses, Printer Cartridges, and Cell phones are collected at this site." + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste15 = L.marker([43.076833, -89.401450], {icon: eWasteIcon}).bindPopup("Located on the lower main level, ground entrance, this tower is located just to the left once you enter the doors next to the UPS shipment dropoff. " + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste16 = L.marker([43.075624, -89.406904], {icon: eWasteIcon}).bindPopup("Located next to the elevator as you walk in the front doors main entrance. This location collects: Batteries, Printer cartridges, Eye Glasses, and Cell phones." + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
-	eWaste17 = L.marker([43.071732, -89.399351], {icon: eWasteIcon}).bindPopup("Located in the main lobby, the location is open for recycling the following items: printer cartridges, eye glasses, cell phones, and batteries." + "<br>" + "<a href='' target='_blank' >More Details</a>"),
-	eWaste = L.layerGroup([eWaste1,eWaste2,eWaste3, eWaste4,eWaste5,eWaste6,eWaste7,eWaste8,eWaste9,eWaste10,eWaste11,eWaste12,eWaste13,eWaste14,eWaste15,eWaste16,eWaste17]);
+    eWaste3 = L.marker([43.072870, -89.401506], {icon: eWasteIcon}).bindPopup("Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste4 = L.marker([43.070407, -89.398350], {icon: eWasteIcon}).bindPopup("Located to the left upon entrance. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste5 = L.marker([43.075910, -89.412248], {icon: eWasteIcon}).bindPopup("Acceptable Recyclables:Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='' target='_blank' >More Details</a>"),
+    eWaste6 = L.marker([43.075403, -89.420198], {icon: eWasteIcon}).bindPopup("Located on the second floor across from the lounge. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste7 = L.marker([43.076833, -89.401450], {icon: eWasteIcon}).bindPopup("Located outside to the left of the main entrance. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Large E-Waste, Clothes" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste8 = L.marker([43.075634, -89.402260], {icon: eWasteIcon}).bindPopup("Located on the main floor across from the cafe. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste9 = L.marker([43.072451, -89.398530], {icon: eWasteIcon}).bindPopup("Located to the left once you enter the first set of doors. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste10 = L.marker([43.068433, -89.399941], {icon: eWasteIcon}).bindPopup("Located on the first floor before the elevators. Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste"),
+    eWaste11 = L.marker([43.076492, -89.399774], {icon: eWasteIcon}).bindPopup("Acceptable Recyclables: Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste12 = L.marker([43.072720, -89.404678], {icon: eWasteIcon}).bindPopup("Located outside the main lecture halls on first floor. Acceptable Recyclables: Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste13 = L.marker([43.074335, -89.411078], {icon: eWasteIcon}).bindPopup("Located in the Biochemistry research building. Go through the main doors go straight back and take a right into a closed door area." + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste14 = L.marker([43.069004, -89.404387], {icon: eWasteIcon}).bindPopup("Located in the workshop area on the main floor next to the various item vending machines. Batteries, Eyeglasses, Printer Cartridges, and Cell phones are collected at this site." + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste15 = L.marker([43.076833, -89.401450], {icon: eWasteIcon}).bindPopup("Located on the lower main level, ground entrance, this tower is located just to the left once you enter the doors next to the UPS shipment dropoff. " + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste16 = L.marker([43.075624, -89.406904], {icon: eWasteIcon}).bindPopup("Located next to the elevator as you walk in the front doors main entrance. This location collects: Batteries, Printer cartridges, Eye Glasses, and Cell phones." + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
+    eWaste17 = L.marker([43.071732, -89.399351], {icon: eWasteIcon}).bindPopup("Located in the main lobby, the location is open for recycling the following items: printer cartridges, eye glasses, cell phones, and batteries." + "<br>" + "<a href='' target='_blank' >More Details</a>"),
+    eWaste = L.layerGroup([eWaste1,eWaste2,eWaste3, eWaste4,eWaste5,eWaste6,eWaste7,eWaste8,eWaste9,eWaste10,eWaste11,eWaste12,eWaste13,eWaste14,eWaste15,eWaste16,eWaste17]);
 
 // Recycle styrofoam
 var styrofoamIcon = new MarkerIcon({iconUrl: "img/styrofoam.png"});
- 
+
 var styrofoam1 = L.marker([43.076271, -89.415253], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Animal Science Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
     styrofoam2 = L.marker([43.075008, -89.413589], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Babcock Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam3 = L.marker([43.074335, -89.411078], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Biochemistry Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam4 = L.marker([43.075091, -89.411089], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Bock Laboratories" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam5 = L.marker([43.072474, -89.406270], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Brogden Psychology Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam6 = L.marker([43.072969, -89.404937], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Chemistry Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam7 = L.marker([43.071728, -89.406714], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Computer Sciences and Statistics" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam8 = L.marker([43.071982, -89.410356], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Engineering Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam9 = L.marker([43.073839, -89.409151], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Genetics-Biotechnology Center Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam10 = L.marker([43.074860, -89.412124], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Horticulture Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam11 = L.marker([43.076825, -89.401214], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Helen C. White Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam12 = L.marker([43.072783, -89.412336], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Mechanical Engineering Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam13 = L.marker([43.075714, -89.411867], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Microbial Sciences Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam14 = L.marker([43.071676, -89.404445], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Noland Zoology Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam15 = L.marker([43.075728, -89.413588], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Russell Laboratories" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam16 = L.marker([43.075624, -89.406904], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Stovall Building (Wisconsin State Laboratory of Hygiene)" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam17 = L.marker([43.074994, -89.409868], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Veterinary Medicine" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam18 = L.marker([43.073943, -89.414076], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Wisconsin Energy Institute" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam19 = L.marker([43.073149, -89.407948], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Wisconsin Institutes for Discovery Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam20 = L.marker([43.068739, -89.406923], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Wisconsin Primate Center" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam21 = L.marker([43.074593, -89.421524], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Wisconsin Veterinary Diagnostics Laboratory" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
-	styrofoam = L.layerGroup([styrofoam1,styrofoam2,styrofoam3, styrofoam4,styrofoam5,styrofoam6,styrofoam7,styrofoam8,styrofoam9,styrofoam10,styrofoam11,styrofoam12,styrofoam13,styrofoam14,styrofoam15,styrofoam16,styrofoam17, styrofoam18, styrofoam19, styrofoam20, styrofoam21]);		
+    styrofoam3 = L.marker([43.074335, -89.411078], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Biochemistry Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam4 = L.marker([43.075091, -89.411089], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Bock Laboratories" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam5 = L.marker([43.072474, -89.406270], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Brogden Psychology Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam6 = L.marker([43.072969, -89.404937], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Chemistry Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam7 = L.marker([43.071728, -89.406714], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Computer Sciences and Statistics" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam8 = L.marker([43.071982, -89.410356], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Engineering Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam9 = L.marker([43.073839, -89.409151], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Genetics-Biotechnology Center Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam10 = L.marker([43.074860, -89.412124], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Horticulture Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam11 = L.marker([43.076825, -89.401214], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Helen C. White Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam12 = L.marker([43.072783, -89.412336], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Mechanical Engineering Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam13 = L.marker([43.075714, -89.411867], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Microbial Sciences Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam14 = L.marker([43.071676, -89.404445], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Noland Zoology Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam15 = L.marker([43.075728, -89.413588], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Russell Laboratories" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam16 = L.marker([43.075624, -89.406904], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Stovall Building (Wisconsin State Laboratory of Hygiene)" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam17 = L.marker([43.074994, -89.409868], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Veterinary Medicine" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam18 = L.marker([43.073943, -89.414076], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Wisconsin Energy Institute" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam19 = L.marker([43.073149, -89.407948], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Wisconsin Institutes for Discovery Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam20 = L.marker([43.068739, -89.406923], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Wisconsin Primate Center" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam21 = L.marker([43.074593, -89.421524], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Wisconsin Veterinary Diagnostics Laboratory" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
+    styrofoam = L.layerGroup([styrofoam1,styrofoam2,styrofoam3, styrofoam4,styrofoam5,styrofoam6,styrofoam7,styrofoam8,styrofoam9,styrofoam10,styrofoam11,styrofoam12,styrofoam13,styrofoam14,styrofoam15,styrofoam16,styrofoam17, styrofoam18, styrofoam19, styrofoam20, styrofoam21]);
 
 // SWAP
 var swapIcon = new MarkerIcon({iconUrl: "img/swap.png"});
- 
+
 var swap = L.marker([42.969385, -89.505466], {icon: swapIcon}).bindPopup("UW SWAP Shop: a multi-faceted surplus property disposal operation that serves all University of Wisconsin-Madison departments, UW System Schools, Municipalities and State of Wisconsin agencies." + "<br>" + "<a href='http://swap.wisc.edu/map.htm' target='_blank' >More Details</a>");
 
 // We Trade
 var weTradeIcon = new MarkerIcon({iconUrl: "img/wetrade.png"});
- 
+
 var weTrade = L.marker([43.071709, -89.406620], {icon: weTradeIcon}).bindPopup("We-Trade: Computer Sciences and Statistics" + "<br>" + "<a href='https://techstore.wisc.edu/trade-up/' target='_blank' >More Details</a>");
 
 // Disposal Services (EHS)
@@ -298,260 +300,242 @@ var recyclopedia = L.marker([43.068759, -89.399734], {icon: recyclopediaIcon}).b
 var educationIcon = new MarkerIcon({iconUrl: "img/education.png"});
 var education1 = L.marker([43.075926, -89.401037], {icon: educationIcon}).bindPopup("Sustainability Certificate from Nelson Institute for Environmental Studies" + "<br>" + "<a href='https://nelson.wisc.edu/undergraduate/sustainability-certificate/index.php' target='_blank' >More Details</a>"),
     education2 = L.marker([43.072880, -89.401874], {icon: educationIcon}).bindPopup("Certificate in Business, Environment & Social Responsibility from School of Buisness" + "<br>" + "<a href='https://bus.wisc.edu/mba/current-students/certificate-programs/sustainability' target='_blank' >More Details</a>"),
-	education = L.layerGroup([education1, education2]);
+    education = L.layerGroup([education1, education2]);
 
 
 $("li").click(function(){
-	if ($(this).hasClass("highlight_stay")) {
-		$(this).removeClass("highlight_stay");
-	} else {
-		$(this).addClass("highlight_stay");
-	}
+    if ($(this).hasClass("highlight_stay")) {
+        $(this).removeClass("highlight_stay");
+    } else {
+        $(this).addClass("highlight_stay");
+    }
 });
 /**
 * Sidebar filter click events
 **/
 // Dictionary to keep track of the filter toggle value
-var showLayer = {
-    "LEED": true,
-	"HVAC": true,
-	"roofGarden": true,
-	"gardenPlot": true,
-    "biking": true,
-    "bikeLocker": true,
-    "bikeCage": true,
-	"bikeRepair": true,
-	"composting": true,
-	"recycleClothes": true,
-	"eWaste": true,
-	"styrofoam": true,
-	"swap": true,
-	"weTrade": true,
-	"disposal": true,
-	"recyclopedia": true,
-	"education": true
-};
+var showLayer = {};
 
 // LEED
-$("#LEED").click(function(e) {
+$("#LEED").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["LEED"]) {
+    if (!showLayer.LEED) {
         LEED.addTo(map);
-        showLayer["LEED"] = false;
+        showLayer.LEED = true;
     } else {
         map.removeLayer(LEED);
-        showLayer["LEED"] = true;
+        showLayer.LEED = false;
     }
 });
 
 // HVAC
-$("#HVAC").click(function(e) {
+$("#HVAC").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["HVAC"]) {
+    if (!showLayer.HVAC) {
         HVAC.addTo(map);
-        showLayer["HVAC"] = false;
+        showLayer.HVAC = true;
     } else {
         map.removeLayer(HVAC);
-        showLayer["HVAC"] = true;
+        showLayer.HVAC = false;
     }
 });
 
 // Roof Garden
-$("#roofGarden").click(function(e) {
+$("#roofGarden").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["roofGarden"]) {
+    if (!showLayer.roofGarden) {
         roofGarden.addTo(map);
-        showLayer["roofGarden"] = false;
+        showLayer.roofGarden = true;
     } else {
         map.removeLayer(roofGarden);
-        showLayer["roofGarden"] = true;
+        showLayer.roofGarden = false;
     }
 });
 
 // Garden plot
-$("#gardenPlot").click(function(e) {
+$("#gardenPlot").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["gardenPlot"]) {
+    if (!showLayer.gardenPlot) {
         gardenPlot.addTo(map);
-        showLayer["gardenPlot"] = false;
+        showLayer.gardenPlot = true;
     } else {
         map.removeLayer(gardenPlot);
-        showLayer["gardenPlot"] = true;
+        showLayer.gardenPlot = false;
     }
 });
 
 // Biking
-$("#biking").click(function(e) {
+$("#biking").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["biking"]) {
+    if (!showLayer.biking) {
         bcycle.addTo(map);
-        showLayer["biking"] = false;
+        showLayer.biking = true;
     } else {
         map.removeLayer(bcycle);
-        showLayer["biking"] = true;
+        showLayer.biking = false;
     }
 });
 
 // Bike Locker
-$("#bikeLocker").click(function(e) {
+$("#bikeLocker").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["bikeLocker"]) {
+    if (!showLayer.bikeLocker) {
         bikeLocker.addTo(map);
-        showLayer["bikeLocker"] = false;
+        showLayer.bikeLocker = true;
     } else {
         map.removeLayer(bikeLocker);
-        showLayer["bikeLocker"] = true;
+        showLayer.bikeLocker= false;
     }
 });
 
 // Bike Cage
-$("#bikeCage").click(function(e) {
+$("#bikeCage").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["bikeCage"]) {
+    if (!showLayer.bikeCage) {
         bikeCage.addTo(map);
-        showLayer["bikeCage"] = false;
+        showLayer.bikeCage = true;
     } else {
         map.removeLayer(bikeCage);
-        showLayer["bikeCage"] = true;
+        showLayer.bikeCage = false;
     }
 });
 
 
 // Bike Repair
-$("#bikeRepair").click(function(e) {
+$("#bikeRepair").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["bikeRepair"]) {
+    if (!showLayer.bikeRepair) {
         bikeRepair.addTo(map);
-        showLayer["bikeRepair"] = false;
+        showLayer.bikeRepair = true;
     } else {
         map.removeLayer(bikeRepair);
-        showLayer["bikeRepair"] = true;
+        showLayer.bikeRepair = false;
     }
 });
 
 // Composting
-$("#composting").click(function(e) {
+$("#composting").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["composting"]) {
+    if (!showLayer.composting) {
         composting.addTo(map);
-        showLayer["composting"] = false;
+        showLayer.composting = true;
     } else {
         map.removeLayer(composting);
-        showLayer["composting"] = true;
+        showLayer.composting = false;
     }
 });
 
 // Recycle Clothes
-$("#recycleClothes").click(function(e) {
+$("#recycleClothes").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["recycleClothes"]) {
+    if (!showLayer.recycleClothes) {
         recycleClothes.addTo(map);
-        showLayer["recycleClothes"] = false;
+        showLayer.recycleClothes = true;
     } else {
         map.removeLayer(recycleClothes);
-        showLayer["recycleClothes"] = true;
+        showLayer.recycleClothes = false;
     }
 });
 
 // Recycle electronics
-$("#eWaste").click(function(e) {
+$("#eWaste").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["eWaste"]) {
+    if (!showLayer.eWaste) {
         eWaste.addTo(map);
-        showLayer["eWaste"] = false;
+        showLayer.eWaste = true;
     } else {
         map.removeLayer(eWaste);
-        showLayer["eWaste"] = true;
+        showLayer.eWaste = false;
     }
 });
 
 // Recycle styrofoam
-$("#styrofoam").click(function(e) {
+$("#styrofoam").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["styrofoam"]) {
+    if (!showLayer.styrofoam) {
         styrofoam.addTo(map);
-        showLayer["styrofoam"] = false;
+        showLayer.styrofoam = true;
     } else {
         map.removeLayer(styrofoam);
-        showLayer["styrofoam"] = true;
+        showLayer.styrofoam = false;
     }
 });
 
 // SWAP
-$("#swap").click(function(e) {
+$("#swap").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["swap"]) {
+    if (!showLayer.swap) {
         swap.addTo(map);
-        showLayer["swap"] = false;
+        showLayer.swap = true;
     } else {
         map.removeLayer(swap);
-        showLayer["swap"] = true;
+        showLayer.swap = false;
     }
 });
 
 // We-trade
-$("#weTrade").click(function(e) {
+$("#weTrade").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["weTrade"]) {
+    if (!showLayer.weTrade) {
         weTrade.addTo(map);
-        showLayer["weTrade"] = false;
+        showLayer.weTrade = true;
     } else {
         map.removeLayer(weTrade);
-        showLayer["weTrade"] = true;
+        showLayer.weTrade = false;
     }
 });
 
 // Chemical Disposal
-$("#disposal").click(function(e) {
+$("#disposal").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["disposal"]) {
+    if (!showLayer.disposal) {
         disposal.addTo(map);
-        showLayer["disposal"] = false;
+        showLayer.disposal = true;
     } else {
         map.removeLayer(disposal);
-        showLayer["disposal"] = true;
+        showLayer.disposal = false;
     }
 });
 
 // Recyclopedia Disposal
-$("#recyclopedia").click(function(e) {
+$("#recyclopedia").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["recyclopedia"]) {
+    if (!showLayer.recyclopedia) {
         recyclopedia.addTo(map);
-        showLayer["recyclopedia"] = false;
+        showLayer.recyclopedia = true;
     } else {
         map.removeLayer(recyclopedia);
-        showLayer["recyclopedia"] = true;
+        showLayer.recyclopedia = false;
     }
 });
 
 
 // Education
-$("#education").click(function(e) {
+$("#education").click(function (e) {
     e.preventDefault();
 
-    if (showLayer["education"]) {
+    if (!showLayer.education) {
         education.addTo(map);
-        showLayer["education"] = false;
+        showLayer.education = true;
     } else {
         map.removeLayer(education);
-        showLayer["education"] = true;
+        showLayer.education = false;
     }
 });
 
