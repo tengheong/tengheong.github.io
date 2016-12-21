@@ -69,7 +69,7 @@ var sidebarContent = "<br>" +
             // Waste management
             "<br >" +
             "<i class='nav-header'>Waste Management</i>" +
-            "<li id='composting' class='list-group-item'> <img src='img/bcycle.png' alt='Composting' height='36px' width='36px' position='right'>Composting</li>" +
+            "<li id='composting' class='list-group-item'> <img src='img/compost.png' alt='Composting' height='36px' width='36px' position='right'>Composting</li>" +
             "<li id='recycleClothes' class='list-group-item'><img src='img/recycleclothes.png' alt='Clothes and Shoes Donation' height='36px' width='36px' position='right'>Clothes and Shoes Donation</li>" +
             "<li id='eWaste' class='list-group-item'><img src='img/recycleelectronic.png' alt='Electronic Waste Recycling' height='36px' width='36px' position='right'>Electronic Waste Recycling</li>" +
             "<li id='styrofoam' class='list-group-item'><img src='img/styrofoam.png' alt='Styrofoam Reuse and Recycling' height='36px' width='36px' position='right'>Styrofoam Reuse and Recycling</li>" +
@@ -203,7 +203,7 @@ var bikeRepair1 = L.marker([43.075634, -89.402260], {icon: bikeRepairIcon}).bind
 * Waste Management
 */
 // Composting
-var compostIcon = new MarkerIcon({iconUrl: "img/bikeresource.png"});
+var compostIcon = new MarkerIcon({iconUrl: "img/compost.png"});
 
 var compost1 = L.marker([43.079622, -89.428863], {icon: compostIcon}).bindPopup("Campus Compost Bin: Parking Lot 76" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
     compost2 = L.marker([43.079763, -89.4263559], {icon: compostIcon}).bindPopup("Campus Compost Bin: Parking Lot 60" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
