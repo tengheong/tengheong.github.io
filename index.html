@@ -1,42 +1,895 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-		
-		<!-- Leaflet -->
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
-  		
-  		<!-- Mapbox -->
-		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-		<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
 
-		<!-- Custom stylesheets -->
-		<link rel="stylesheet" href="css/sidebar.css">
-		<link rel="stylesheet" href="css/style.css">
+<head>
+	{% seo %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is my professional portfolio.">
+    <meta name="author" content="Teng Heong Ng">
 
-		<title>Sustainability in University of Wisconsin-Madison</title>
-		<!--[if IE]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-			</script>
-		<![endif]-->
-		<!--[if lte IE 8]>
-			<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.ie.css" />
-		<![endif]-->
-	</head>
+    <title>Teng Heong Ng</title>
+	<link rel="shortcut icon" type=image/png href="img/h.png" />
 
-	<body>
-		<div id="sidebar"></div>
-		<div id="mapid"></div>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-		<!--scripts-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-		<script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="js/sidebar.min.js"></script>
-		<script src="js/main.min.js"></script>
-	</body>
+    <!-- Theme CSS -->
+    <link href="vendor/freelancer/css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/timeline.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="#page-top">Teng Heong Ng</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden">
+              <a href="#page-top"></a>
+            </li>
+            <li class="page-scroll">
+              <a href="#about">About</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#experience">Experience</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#skills">Skills</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#portfolio">Project</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+	  <div class="jumbotron">
+		<div id="switch-navbar-color" class="intro-text">
+		  <br><br><br><br><br><br><br><br><br><br><br><br>
+		  <span class="name">Teng Heong Ng</span>
+		  <span class="skills">Urban Planning &#9679; GIS &#9679; Cartography </span>
+		</div>
+	  </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>About Me</h2>
+			<br><br>
+          </div>
+        </div>
+        <div class="row">
+          <p>
+            I am studying <a href="http://urpl.wisc.edu/" target="_blank">Master's in Urban and Regional Planning</a> at the <a href="http://www.wisc.edu/" target="_blank">University of Wisconsin-Madison</a>. My lifelong mission is to foster equitable, sustainable, and vibrant communities. I am seeking an urban planning position where I can utilizes my expertise in project management, GIS, graphic publication, and research to assist communities in making informed decision.
+          </p>
+        </div>
+      </div>
+    </section>
+	
+	<section id="education" class="row-edu">
+	  <div class="container">
+        <div class="row">
+		  <div class="col-lg-12 text-center">
+            <h2>Education</h2>
+			<br><br>
+          </div>
+          <div class="col-lg-12 text-center">
+            <h4 class="timeline-body">University of Wisconsin-Madison</h4>
+            <div class="timeline-body">
+              <p>Masters of Science, May 2017</p>
+              <p>Major: Urban and Regional Planning</p>
+              <p>GPA: 3.71/4.00</p>
+            </div>
+          </div>
+		  <div class="col-lg-12 text-center">
+            <div class="timeline-body">
+			  <br>
+              <p>Bachelor of Arts, May 2013</p>
+              <p>Major: Economics with Math Emphasis</p>
+              <p>GPA: 3.48/4.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Working Experience</h2>
+            <br><br><br>
+          </div>
+        </div>
+        <div class="row">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-badge info"><i class="glyphicon glyphicon-briefcase"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Department of Urban and Regional Planning, University of Wisconsin-Madison</h3>
+                  <h4 class="timeline-body">Project Assistant</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> January 2017 - May 2017</small></p>
+                </div>
+                <div class="timeline-body">
+                  <h5 class="timeline-body">Research, project management</h5>
+                  <p>
+                  <ul>
+                    <li>Developed a graduate level Chicano/Latino Studies and Urban and Regional Planning course.</li>
+                  </ul>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-badge warning"><i class="glyphicon glyphicon-briefcase"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Metro Transit, Metropolitan Council</h3>
+				  <h4 class="timeline-body">Transit Technology Systems Intern/ Urban Scholar</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> May 2016 - August 2016</small></p>
+                </div>
+                <div class="timeline-body">
+                  <h5 class="timeline-body">GIS, Transit Asset Management, Regional Planning</h5>
+                  <p>
+                    <ul>
+                      <li>Audited 270 bus transit facilities in Minneapolis–Saint Paul, MN</li>
+                      <li>Established an online GIS database for asset management</li>
+					  <li>Analyzed the performance of Americans with Disabilities Act (ADA) compliant transit facilities</li>
+					  <li>Participated in weekly 10-hour leadership development training that includes Toastmasters International, James P. Shannon Leadership Institutes, leadership round-tables, and council meetings</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-badge success"><i class="glyphicon glyphicon-briefcase"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">University Health Services, University of Wisconsin-Madison</h3>
+                  <h4 class="timeline-body">Health Equity Student Assistant</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> October 2015 - January 2017</small></p>
+                </div>
+                <div class="timeline-body">
+                  <h5 class="timeline-body">Project management, food systems, GIS, Transportation planning, Community planning</h5>
+                  <p>
+                    <ul>
+                      <li>Led an $18,000 Ford Foundation project to provide affordable and fresh local produce to low-income communities in South Madison, WI</li>
+                      <li>Conducted delivery route suitability analysis, established payment logistic, and conducted five training workshops for 35 volunteers </li>
+					  <li>Delivered talks in Global Health Conference and conducted five community outreach activities</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-badge danger"><i class="glyphicon glyphicon-briefcase"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Department of Urban and Regional Planning, University of Wisconsin-Madison</h3>
+                  <h4 class="timeline-body">Hourly Project Assistant</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> October 2015 - December 2016</small></p>
+                </div>
+                <div class="timeline-body">
+                  <h5 class="timeline-body">Data analysis, GIS mapping, Research</h5>
+                  <p>
+                    <ul>
+                      <li>Assisted Prof. Alfonso Morales in two grant applications, one article publication, four GIS mappings, and data analysis of nine farmers markets</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline">
+              <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">PwC Malaysia</h3>
+                  <h4 class="timeline-body">Associate Consultant in Climate Change and Sustainability Team </h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> March 2015 - June 2015</small></p>
+                </div>
+                <div class="timeline-body">
+                  <h5 class="timeline-body"> Consulting, Research, Data analysis, Reporting</h5>
+                  <p>
+                    <ul>
+                      <li>Identified social and environmental impacts and developed sustainability solutions for companies</li>
+                      <li>Analyzed existing sustainability practices and recommended best practices for improvements</li>
+					  <li>Ensured compliance of sustainability reports with the latest accredited framework</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Professional Skills</h2>
+            <br><br><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-centered">
+            <center>
+              <h3>Graphic design</h3>
+            </center>
+            <div class="col-xs-6 text-right content-text">
+              <ul class="list-unstyled">
+                <li>Adobe InDesign</li>
+                <li></li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+                <li>Google SketchUp</li>
+              </ul>
+            </div>
+            <div class="col-xs-6 text-left content-text">
+              <ul class="list-unstyled">
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-centered">
+            <center>
+              <h3>Scripting Languages</h3>
+            </center>
+            <div class="col-xs-6 text-right">
+              <ul class="list-unstyled">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <div class="col-xs-6 text-left">
+              <ul class="list-unstyled">
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-centered">
+            <center>
+              <h3>GIS application/GeoComputing</h3>
+            </center>
+            <div class="col-xs-6 text-right">
+              <ul class="list-unstyled">
+                <li>ArcGIS</li>
+                <li>QGIS</li>
+                <li>GDAL</li>
+                <li>OGR</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <div class="col-xs-6 text-left">
+              <ul class="list-unstyled">
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+		<div class="row">
+          <div class="col-centered">
+            <center>
+              <h3>Statistical analysis</h3>
+            </center>
+            <div class="col-xs-6 text-right">
+              <ul class="list-unstyled">
+                <li>SPSS</li>
+                <li>Qualtrics</li>
+              </ul>
+            </div>
+            <div class="col-xs-6 text-left">
+              <ul class="list-unstyled">
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+		<div class="row">
+          <div class="col-centered">
+            <center>
+              <h3>Framework</h3>
+            </center>
+            <div class="col-xs-6 text-right">
+              <ul class="list-unstyled">
+                <li>Mapbox</li>
+                <li>Google Chart</li>
+				<li>Leaflet</li>
+              </ul>
+            </div>
+            <div class="col-xs-6 text-left">
+              <ul class="list-unstyled">
+			    <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Grid Section -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Projects</h2>
+            <br><br><br>
+          </div>
+        </div>
+        <div class="row">
+          <div id="projectPhoto" class="col-sm-4 portfolio-item">
+            <a href="#portfolio1" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+                  <h4>Interactive Mapping</h4>
+				  <p>Sustainability in UW-Madison</P>
+                </div>
+              </div>
+              <img src="img/portfolio/portfolio1.jpg" class="img-responsive" alt="">
+            </a>
+          </div>
+		  <div id="projectPhoto" class="col-sm-4 portfolio-item">
+            <a href="#portfolio2" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+                  <h4>Interactive Web Report</h4>
+				  <p>Parent Survey about Biking and Walking to School</P>
+				  <p>City of Monona, WI</P>
+                </div>
+              </div>
+              <img src="img/portfolio/portfolio2.jpg" class="img-responsive" alt="">
+            </a>
+          </div>
+		  <div id="projectPhoto" class="col-sm-4 portfolio-item">
+            <a href="#portfolio3" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+                  <h4>Multiscale Map Design</h4>
+				  <p>Andy Warhol Pastiche Map</P>
+                </div>
+              </div>
+              <img src="img/portfolio/portfolio3.jpg" class="img-responsive" alt="">
+            </a>
+          </div>
+		  <div id="projectPhoto" class="col-sm-4 portfolio-item">
+            <a href="#portfolio4" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+                  <h4>Terrain Mapping</h4>
+				  <p>Tour de France in Southeast Asia</P>
+                </div>
+              </div>
+              <img src="img/portfolio/portfolio4.jpg" class="img-responsive" alt="">
+            </a>
+          </div>
+		  <div id="projectPhoto" class="col-sm-4 portfolio-item">
+            <a href="#portfolio5" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+                  <h4>Infographic</h4>
+				  <p>Poverty and Crime in Chicago</P>
+                </div>
+              </div>
+              <img src="img/portfolio/portfolio5.jpg" class="img-responsive" alt="">
+            </a>
+          </div>
+		  <div id="projectPhoto" class="col-sm-4 portfolio-item">
+            <a href="#portfolio6" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+				  <h4>GIS: Site Selection</h4>
+                  <p>How to find an ideal neighborhood  using GIS?</p>
+                </div>
+              </div>
+              <img src="img/portfolio/portfolio6.png" class="img-responsive" alt="">
+            </a>
+          </div>
+		  <div id="projectPhoto" class="col-sm-4 portfolio-item">
+            <a href="#portfolio7" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+				  <h4>GIS: Walkability Analysis</h4>
+                  <p>Walkability Analysis for Truax Air Park Zones</p>
+                </div>
+              </div>
+              <img src="img/portfolio/portfolio7.png" class="img-responsive" alt="">
+            </a>
+          </div>
+		  <div id="projectPhoto" class="col-sm-4 portfolio-item">
+            <a href="#portfolio8" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+				  <h4>Site Planning</h4>
+                  <p>Google SketchUp for Truax Air Park Zones</p>
+                </div>
+              </div>
+              <img src="img/portfolio/portfolio8.png" class="img-responsive" alt="">
+            </a>
+          </div>
+		  <div id="projectPhoto" class="col-sm-4 portfolio-item">
+            <a href="#portfolio9" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+				  <h4>Statistical Analysis</h4>
+                  <p>Latino Workers and Employer Health Benefits in Dane County, Wisconsin</p>
+                </div>
+              </div>
+              <img src="img/portfolio/portfolio9.png" class="img-responsive" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Contact Me</h2>
+            <br><br><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <center>
+              <form name="sentMessage" id="contactForm" action="https://formspree.io/tengheong.ng@gmail.com" method="POST">
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Name</label>
+                    <input type="text" class="form-control" placeholder="Name" id="name" name="name" required data-validation-required-message="Please enter your name.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" placeholder="Email Address" id="email" name="_replyTo" required data-validation-required-message="Please enter your email address.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="row control-group">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label>Message</label>
+                    <textarea rows="5" class="form-control" placeholder="Message" id="message" name="message" required data-validation-required-message="Please enter a message."></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                  <div class="form-group col-xs-12">
+                    <button type="submit" class="btn btn-success btn-lg">Send</button>
+                  </div>
+                </div>
+              </form>
+            </center>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+            <h3>Connect with me</h3>
+            <ul class="list-inline">
+              <li class="connect_icons">
+                <a href="https://www.linkedin.com/in/tengheongng" target="_blank" class="btn-social btn-outline">
+				  <i class="fa fa-fw fa-linkedin"></i>
+				</a>
+              </li>
+			  <li class="connect_icons">
+                <a id="resume" href="source/Teng Heong Ng_Resume.pdf" target="_blank" class="btn-social btn-outline">
+				<i class="fa fa-file-text-o" aria-hidden="true"></i>
+				</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <br />
+      </div>
+
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; Teng Heong Ng 2017
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+      <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolio1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="modal-body">
+              <h2>Interactive Mapping</h2>
+              <br>
+              <p>Sustainability in University of Wisconin-Madison</p>
+              <hr />
+              <br>
+			  <h3> Techniques</h3>
+			  <p> Leaflet, Adobe Illustrator, HTML, CSS, JavaScript, GitHub</p>
+			  <br>
+			  <p>
+			  UW-Madison has been investing in campus sustainability and it aligns with the teaching, research, and outreach in the campus. I noticed that the Office of Sustainability does not have an interactive map that highlights the sustanability features around campus. Therefore, I am interested in documenting the sustainability efforts in a shareable medium to celebrate, educate, and market about our efforts.
+			  </p>
+			  <p>
+			  Check out the website by clicking the image below.
+			  </p>
+			  <br>
+			  <a href="sustainability-map.html" target="_blank"><img src="img/sustain.png" alt="sustainability website"></a>
+			  <br>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolio2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="modal-body">
+              <h2>Interactive Web Report</h2>
+              <br>
+              <p>Parent Survey about Walking and Biking to School </p>
+			  <p> City of Monona</>
+              <hr />
+              <br>
+			  <h3> Techniques</h3>
+			  <p> Google Chart, Adobe Illustrator, HTML, CSS, JavaScript, GitHub, Qualtrics</p>
+			  <br>
+			  <p>In the Fall 2016, I attended a planning workshop. Our client is the City of Monona and we are helping them in bike and pedestrain transportation planning. In this project, we distributed survey about children walking and bike to school to parents from five different schools in the City of Monona. I created the survey using Qualtrics. Later, I displayed the survey result by creating an interactive online reporting website. I used Google Chart to incorporate graphs and Google My Maps to incorporate maps.</p>
+			  <p> Click on the image below to check out the website.</p>
+			  <br>
+			  <a href="https://parentsurvey.github.io/" target="_blank">
+				<img src="img/survey.png" alt="survey website">
+			  </a>
+			  <br>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolio3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="modal-body">
+              <h2>Mutliscale Map</h2>
+              <br>
+              <p>Andy Warhol Pastiche Map</p>
+              <hr />
+              <br>
+			  <h3> Techniques</h3>
+			  <p> Mapbox, CSS, Adobe Illustrator, Adobe Photoshop, Project Management</p>
+			  <br>
+			  <p>I created a slippy map using Mapbox.com. It is a pastiche of Andy Warhol art pieces. The appearance of the map changes at different zoom levels.</p>
+			  <p> Click on the image below to check out the website.</p>
+			  <br>
+			  <a href="https://api.mapbox.com/v4/heong.3d65f02e/page.html?access_token=pk.eyJ1IjoiaGVvbmciLCJhIjoiY2lneWlmaHJnMHZxbDY1bTB3MGx5M3NuciJ9.vsh6zu149YxMB7vlbRWF5w#3/35.53/-110.04" target="_blank">
+				<img src="img/slippymap.PNG" alt="slippy map">
+			  </a>
+			  <br>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolio4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="modal-body">
+              <h2>Terrain Map</h2>
+              <br>
+              <p>Tour de France in Southeast Asia</p>
+              <hr />
+              <br>
+			  <h3> Techniques</h3>
+			  <p> GIS for hillshade and landcover analysis, Adobe Illustrator, Adobe Photoshop</p>
+			  <br>
+			  <p>Tour de Southeast Asia is a terrain/informative map about a bike route I designed that mimics the concept of Tour de France. The route has three phases: each phase consists of 7 days of biking and the 8th day as the rest day. In total, it takes 23 days to complete the 2149-mile route. This bike tour will bring you to famous attractions in Southeast Asia.</p>
+			  <br>
+			  <img src="img/terrain.png" alt="terrain map" >
+			  <br>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolio5" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="modal-body">
+              <h2>Infographic</h2>
+              <br>
+              <p>Poverty and Crime Rate in Neighborhoods of Chicago</p>
+              <hr />
+              <br>
+			  <h3> Techniques</h3>
+			  <p> GIS, Adobe Illustrator, Adobe Photoshop</p>
+			  <br>
+			  <img src="img/poverty.png" alt="terrain map" >
+			  <br>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<div class="portfolio-modal modal fade" id="portfolio6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="modal-body">
+              <h2>GIS: Site Selection</h2>
+              <br>
+              <p>How to find your ideal neighborhood using GIS?</p>
+              <hr />
+              <br>
+			  <h3>Techniques</h3>
+			  <p>Esri ArcMap</p>
+			  <br>
+			  <div align="left">
+			  <p>My client is moving to Madison and is looking for an ideal neighborhood with the following criteria:</p>
+				<ol>
+					<li>Within 4 miles from workplace (Music Hall)</li>
+					<li>Within 1 mile from local natural attraction such as Lake Mendota, Lake Monona, and UW Arboretum.</li>
+					<li>0.25 miles away from Superfund sites</li>
+					<li>Within local school districts</li>
+				</ol>
+			  </div>
+			  <p> The following map is the result of the selection using buffer and clipping tools from the ArcMap.</p>
+			  <img src="img/selection.png" alt="terrain map" >
+			  <br>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<div class="portfolio-modal modal fade" id="portfolio7" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="modal-body">
+              <h2>Site Planning: Walkability Analysis</h2>
+              <br>
+              <p>Walkability Analysis for Truax Air Park Zones</p>
+              <hr />
+              <br>
+			  <h3> Techniques</h3>
+			  <p> Esri ArcMap</p>
+			  <br>
+			  <p>Dane County Regional Airport is exploring potential development opportunities around the area surrounding the airport (Truax Air Park Zones). The area includes Madison Area Technical School (MATC) which has over thousands of students, faculties and staff. Before making any recommendation, I did a transporation analysis on the walkability to existing restaurants and bus station from the Truax Air Park Zones. The analysis reveals whether the exisiting public transportation and restaurants amenities meet the demands of the population.</p>
+			  <br>
+			  <img src="img/RestWakability.png" alt="walkability" >
+			  <img src="img/BusWakability.png" alt="walkability" >
+			  <br>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>	
+	<div class="portfolio-modal modal fade" id="portfolio8" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="modal-body">
+              <h2>Site Planning</h2>
+              <br>
+              <p>Delveopment of Truax Air Zone Parks</p>
+              <hr />
+              <br>
+			  <h3>Techniques</h3>
+			  <p>Google Sketchup, Adobe InDesign</p>
+			  <br>
+			  <p>Dane County Regional Airport is exploring potential development opportunities around the area surrounding the airport (Truax Air Park Zones). In this project, the following area is selected for development.</p>
+			  <br>
+			  <img src="img/portfolio8/birdview.png" alt="area for development" >
+			  <br><br>
+			  <p> The following is the suggested development for the two parcels:<p>
+			  <br>
+			  <img src="img/portfolio8/Bubblechart.png" alt="bubble chart">
+			  <br>
+			  <p> I used Google SketchUp to visualize the hotel and mixed use buildings suggested in the bubble chart.</p>
+			  <br>
+			  <p> Plan view </p>
+			  <img src="img/portfolio8/planview.png" alt="plan view">
+			  <br>
+			  <p>Hotel</p>
+			  <img src="img/portfolio8/hotel.png" alt="plan view">
+			  <br>
+			  <p>Mixed use</p>
+			  <img src="img/portfolio8/mixeduse.png" alt="plan view">
+			  <br>
+			  <img src="img/portfolio8/transportation.png" alt="transportation">
+			  <br>
+			  <img src="img/portfolio8/greenPractices.png" alt="green practices">
+			  <br>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>	
+	<div class="portfolio-modal modal fade" id="portfolio9" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="modal-body">
+              <h2>Statistical Analysis</h2>
+              <br>
+              <p>Latino Workers and Employer Health Benefits in Dane County, Wisconsin</p>
+              <hr />
+              <br>
+			  <h3> Techniques</h3>
+			  <p> SPSS</>
+			  <br>
+			  <p>This is a group project to analyze Latino Workers and Employer Health Benefits in Dane County, Wisconsin. I was in charged of the data analysis part of the report which involved extensive use of SPSS.</p>
+			  <br>
+			  <embed src="source/latinoReport.pdf" width="1200px" height="1000px"/>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>	
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="vendor/freelancer/js/jqBootstrapValidation.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="vendor/freelancer/js/freelancer.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/helper.js"></script>
+
+</body>
 
 </html>

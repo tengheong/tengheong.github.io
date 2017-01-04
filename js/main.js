@@ -41,7 +41,7 @@ setTimeout(function () {
 }, 500);
 
 var sidebarContent = "<br>" +
-    "<center><a href='http://sustainability.wisc.edu/' target='_blank'><img id='logo' src='img/sustainabilitylogo.png' alt='Office of Sustianiblity logo' height='200px' width='330px'></a></center>" +
+    "<center><a href='http://sustainability.wisc.edu/' target='_blank'><img id='logo' src='img/sustainability-map/sustainabilitylogo.png' alt='Office of Sustianiblity logo' height='200px' width='330px'></a></center>" +
     "<br>" +
     "<br>" +
     "<h2>“The University of Wisconsin–Madison will be a living model for sustainability, exemplifying values and actions that demonstrate our commitment to stewardship of resources, respect for place and the health and well–being of the broader community, now and for the future.”</h2>" +
@@ -53,35 +53,35 @@ var sidebarContent = "<br>" +
         "<ul class='list-group checked-list-box'>" +
             // Physcial environment
             "<i class='nav-header'>Physical Environment</i>" +
-            "<li id='LEED' class='list-group-item'> <img src='img/leedcertified.png' alt='LEED Certified Building' height='36px' width='36px' position='right'>LEED Certified Building</li>" +
-            "<li id='HVAC' class='list-group-item'> <img src='img/HVAC.png' alt='HVAC Upgraded Building' height='36px' width='36px' position='right'>HVAC Upgraded Building</li>" +
-            "<li id='roofGarden' class='list-group-item'> <img src='img/roofgarden.png' alt='Green Roof' height='36px' width='36px' position='right'>Green Roof</li>" +
-            "<li id='gardenPlot' class='list-group-item'> <img src='img/gardenplot.png' alt='Garden Plots' height='36px' width='36px' position='right'>Garden Plots</li>" +
+            "<li id='LEED' class='list-group-item'> <img src='img/sustainability-map/leedcertified.png' alt='LEED Certified Building' height='36px' width='36px' position='right'>LEED Certified Building</li>" +
+            "<li id='HVAC' class='list-group-item'> <img src='img/sustainability-map/HVAC.png' alt='HVAC Upgraded Building' height='36px' width='36px' position='right'>HVAC Upgraded Building</li>" +
+            "<li id='roofGarden' class='list-group-item'> <img src='img/sustainability-map/roofgarden.png' alt='Green Roof' height='36px' width='36px' position='right'>Green Roof</li>" +
+            "<li id='gardenPlot' class='list-group-item'> <img src='img/sustainability-map/gardenplot.png' alt='Garden Plots' height='36px' width='36px' position='right'>Garden Plots</li>" +
 
             // Transportation
             "<br >" +
             "<i class='nav-header'>Transportation</i>" +
-            "<li id='biking' class='list-group-item'> <img src='img/bcycle.png' alt='bcycle' height='36px' width='36px' position='right'>Bcycle </li>" +
-            "<li id='bikeLocker' class='list-group-item'><img src='img/bikelocker.png' alt='bikelocker' height='36px' width='36px' position='right'>Bike locker</li>" +
-            "<li id='bikeCage' class='list-group-item'><img src='img/bikecage.png' alt='bikecage' height='36px' width='36px' position='right'>Bike cage</li>" +
-            "<li id='bikeRepair' class='list-group-item'><img src='img/bikeresource.png' alt='university bike resource center' height='36px' width='36px' position='right'>University bike and repair center</li>" +
+            "<li id='biking' class='list-group-item'> <img src='img/sustainability-map/bcycle.png' alt='bcycle' height='36px' width='36px' position='right'>Bcycle </li>" +
+            "<li id='bikeLocker' class='list-group-item'><img src='img/sustainability-map/bikelocker.png' alt='bikelocker' height='36px' width='36px' position='right'>Bike locker</li>" +
+            "<li id='bikeCage' class='list-group-item'><img src='img/sustainability-map/bikecage.png' alt='bikecage' height='36px' width='36px' position='right'>Bike cage</li>" +
+            "<li id='bikeRepair' class='list-group-item'><img src='img/sustainability-map/bikeresource.png' alt='university bike resource center' height='36px' width='36px' position='right'>University bike and repair center</li>" +
 
             // Waste management
             "<br >" +
             "<i class='nav-header'>Waste Management</i>" +
-            "<li id='composting' class='list-group-item'> <img src='img/compost.png' alt='Composting' height='36px' width='36px' position='right'>Composting</li>" +
-            "<li id='recycleClothes' class='list-group-item'><img src='img/recycleclothes.png' alt='Clothes and Shoes Donation' height='36px' width='36px' position='right'>Clothes and Shoes Donation</li>" +
-            "<li id='eWaste' class='list-group-item'><img src='img/recycleelectronic.png' alt='Electronic Waste Recycling' height='36px' width='36px' position='right'>Electronic Waste Recycling</li>" +
-            "<li id='styrofoam' class='list-group-item'><img src='img/styrofoam.png' alt='Styrofoam Reuse and Recycling' height='36px' width='36px' position='right'>Styrofoam Reuse and Recycling</li>" +
-            "<li id='swap' class='list-group-item'><img src='img/swap.png' alt='SWAP' height='36px' width='36px' position='right'>SWAP</li>" +
-            "<li id='weTrade' class='list-group-item'><img src='img/wetrade.png' alt='We-trade' height='36px' width='36px' position='right'>We-trade</li>" +
-            "<li id='disposal' class='list-group-item'><img src='img/chemical.png' alt='Disposal Serves (EHS)' height='36px' width='36px' position='right'>Disposal Serves (EHS)</li>" +
-            "<li id='recyclopedia' class='list-group-item'><img src='img/recyclopedia.png' alt='Recyclopedia (EHS)' height='36px' width='36px' position='right'>Recyclopedia (EHS)</li>" +
+            "<li id='composting' class='list-group-item'> <img src='img/sustainability-map/compost.png' alt='Composting' height='36px' width='36px' position='right'>Composting</li>" +
+            "<li id='recycleClothes' class='list-group-item'><img src='img/sustainability-map/recycleclothes.png' alt='Clothes and Shoes Donation' height='36px' width='36px' position='right'>Clothes and Shoes Donation</li>" +
+            "<li id='eWaste' class='list-group-item'><img src='img/sustainability-map/recycleelectronic.png' alt='Electronic Waste Recycling' height='36px' width='36px' position='right'>Electronic Waste Recycling</li>" +
+            "<li id='styrofoam' class='list-group-item'><img src='img/sustainability-map/styrofoam.png' alt='Styrofoam Reuse and Recycling' height='36px' width='36px' position='right'>Styrofoam Reuse and Recycling</li>" +
+            "<li id='swap' class='list-group-item'><img src='img/sustainability-map/swap.png' alt='SWAP' height='36px' width='36px' position='right'>SWAP</li>" +
+            "<li id='weTrade' class='list-group-item'><img src='img/sustainability-map/wetrade.png' alt='We-trade' height='36px' width='36px' position='right'>We-trade</li>" +
+            "<li id='disposal' class='list-group-item'><img src='img/sustainability-map/chemical.png' alt='Disposal Serves (EHS)' height='36px' width='36px' position='right'>Disposal Serves (EHS)</li>" +
+            "<li id='recyclopedia' class='list-group-item'><img src='img/sustainability-map/recyclopedia.png' alt='Recyclopedia (EHS)' height='36px' width='36px' position='right'>Recyclopedia (EHS)</li>" +
 
             // Education
             "<br >" +
             "<i class='nav-header'>Education</i>" +
-            "<li id='education' class='list-group-item'><img src='img/education.png' alt='Education' height='36px' width='36px' position='right'>Education</li>" +
+            "<li id='education' class='list-group-item'><img src='img/sustainability-map/education.png' alt='Education' height='36px' width='36px' position='right'>Education</li>" +
         "</ul>" +
         "<p>Credits: Icon is modified from the <a href='https://thenounproject.com/' target='_blank'>Noun Project</a></p>" +
         "<p>Created by <a href='https://tengheong.wordpress.com/' target='_blank'>Teng Heong Ng</a></p>" +
@@ -94,26 +94,26 @@ sidebar.setContent(sidebarContent);
 */
 
 // LEED buildings
-var goldLEEDIcon = new MarkerIcon({iconUrl: "img/leedgold.png"}),
-    silverLEEDIcon = new MarkerIcon({iconUrl: "img/leedsilver.png"}),
-    platinumLEEDIcon = new MarkerIcon({iconUrl: "img/leedplatinum.png"});
+var goldLEEDIcon = new MarkerIcon({iconUrl: "img/sustainability-map/leedgold.png"}),
+    silverLEEDIcon = new MarkerIcon({iconUrl: "img/sustainability-map/leedsilver.png"}),
+    platinumLEEDIcon = new MarkerIcon({iconUrl: "img/sustainability-map/leedplatinum.png"});
 
-var LEED1 = L.marker([43.071198, -89.411066], {icon: silverLEEDIcon}).bindPopup("LEED Silver Certified: Student Athlete Performance Center" + "<br>" + "<img src='img/camprandall.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Student-Athlete-Performance-Center.htm' target='_blank' >More Details</a>"),
-    LEED2 = L.marker([43.069355, -89.397740], {icon: silverLEEDIcon}).bindPopup("LEED Silver Certified: LaBahn Arena" + "<br>" + "<img src='img/LaBahn.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/LaBahn-Arena.htm' target='_blank' >More Details</a>"),
-    LEED3 = L.marker([43.078286, -89.431595], {icon: silverLEEDIcon}).bindPopup(" Tracking LEED Silver Certified: Wisconsin Institutes for Medical Research Phase II" + "<br>" + "<img src='img/WIMR.jpg' height='200px' width='250px'>" + "<br>" + "<a href='' target='_blank' >More Details</a>"),
-    LEED4 = L.marker([43.075632, -89.433078], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: UW Medical Foundation Centennial Building" + "<br>" + "<img src='img/uwmedical.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/UW-Medical-Foundation-Centennial-Building.htm' target='_blank' >More Details</a>"),
-    LEED5 = L.marker([43.073078, -89.407884], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Wisconsin Institutes for Discovery" + "<br>" + "<img src='img/WID.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Wisconsin-Institutes-for-Discovery.htm' target='_blank' >More Details</a>"
+var LEED1 = L.marker([43.071198, -89.411066], {icon: silverLEEDIcon}).bindPopup("LEED Silver Certified: Student Athlete Performance Center" + "<br>" + "<img src='img/sustainability-map/camprandall.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Student-Athlete-Performance-Center.htm' target='_blank' >More Details</a>"),
+    LEED2 = L.marker([43.069355, -89.397740], {icon: silverLEEDIcon}).bindPopup("LEED Silver Certified: LaBahn Arena" + "<br>" + "<img src='img/sustainability-map/LaBahn.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/LaBahn-Arena.htm' target='_blank' >More Details</a>"),
+    LEED3 = L.marker([43.078286, -89.431595], {icon: silverLEEDIcon}).bindPopup(" Tracking LEED Silver Certified: Wisconsin Institutes for Medical Research Phase II" + "<br>" + "<img src='img/sustainability-map/WIMR.jpg' height='200px' width='250px'>" + "<br>" + "<a href='' target='_blank' >More Details</a>"),
+    LEED4 = L.marker([43.075632, -89.433078], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: UW Medical Foundation Centennial Building" + "<br>" + "<img src='img/sustainability-map/uwmedical.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/UW-Medical-Foundation-Centennial-Building.htm' target='_blank' >More Details</a>"),
+    LEED5 = L.marker([43.073078, -89.407884], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Wisconsin Institutes for Discovery" + "<br>" + "<img src='img/sustainability-map/WID.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Wisconsin-Institutes-for-Discovery.htm' target='_blank' >More Details</a>"
     ),
-    LEED6 = L.marker([43.071999, -89.407822], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Union South" + "<br>" + "<img src='img/unionsouth.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Union-South.htm' target='_blank' >More Details</a>"),
-    LEED7 = L.marker([43.075925, -89.408716], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Nancy Nicholas Hall" + "<br>" + "<img src='img/nancy.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Nancy-Nicholas-Hall.htm' target='_blank' >More Details</a>"),
-    LEED8 = L.marker([43.073932, -89.413992], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Wisconsin Energy Institute" + "<br>" + "<img src='img/WEI.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Wisconsin-Energy-Institute.htm' target='_blank' >More Details</a>"),
-    LEED9 = L.marker([43.077855, -89.417756], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Lakeshore Residence Hall" + "<br>" + "<img src='img/leopold.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Lakeshore-Residence-Hall-Phase-II-Food-Service-Phase-II.htm' target='_blank' >More Details</a>"),
-    LEED10 = L.marker([43.077607, -89.428300], {icon: silverLEEDIcon}).bindPopup("LEED Silver Certified: Signe Skott Cooper Hall" + "<br>" + "<img src='img/Cooper_Hal.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Signe-Skott-Cooper-Hall.htm' target='_blank' >More Details</a>"),
-    LEED11 = L.marker([43.075634, -89.402260], {icon: platinumLEEDIcon}).bindPopup("LEED Platinum  Certified:  Education Building" + "<br>" + "<img src='img/education.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Education-Building.htm' target='_blank' >More Details</a>"),
+    LEED6 = L.marker([43.071999, -89.407822], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Union South" + "<br>" + "<img src='img/sustainability-map/unionsouth.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Union-South.htm' target='_blank' >More Details</a>"),
+    LEED7 = L.marker([43.075925, -89.408716], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Nancy Nicholas Hall" + "<br>" + "<img src='img/sustainability-map/nancy.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Nancy-Nicholas-Hall.htm' target='_blank' >More Details</a>"),
+    LEED8 = L.marker([43.073932, -89.413992], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Wisconsin Energy Institute" + "<br>" + "<img src='img/sustainability-map/WEI.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Wisconsin-Energy-Institute.htm' target='_blank' >More Details</a>"),
+    LEED9 = L.marker([43.077855, -89.417756], {icon: goldLEEDIcon}).bindPopup("LEED Gold Certified: Lakeshore Residence Hall" + "<br>" + "<img src='img/sustainability-map/leopold.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Lakeshore-Residence-Hall-Phase-II-Food-Service-Phase-II.htm' target='_blank' >More Details</a>"),
+    LEED10 = L.marker([43.077607, -89.428300], {icon: silverLEEDIcon}).bindPopup("LEED Silver Certified: Signe Skott Cooper Hall" + "<br>" + "<img src='img/sustainability-map/Cooper_Hal.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Signe-Skott-Cooper-Hall.htm' target='_blank' >More Details</a>"),
+    LEED11 = L.marker([43.075634, -89.402260], {icon: platinumLEEDIcon}).bindPopup("LEED Platinum  Certified:  Education Building" + "<br>" + "<img src='img/sustainability-map/education.jpg' height='200px' width='250px'>" + "<br>" + "<a href='http://www.cpd.fpm.wisc.edu/Education-Building.htm' target='_blank' >More Details</a>"),
     LEED = L.layerGroup([LEED1,LEED2,LEED3,LEED4,LEED5,LEED6,LEED7,LEED8,LEED9,LEED10,LEED11]);
 
 // HVAC Upgraded Building
-var hvacIcon = new MarkerIcon({iconUrl: "img/HVAC.png"});
+var hvacIcon = new MarkerIcon({iconUrl: "img/sustainability-map/HVAC.png"});
 
 var hvac1 = L.marker([43.075979, -89.422589], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Biotron" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
     hvac2 = L.marker([43.074848, -89.411100], {icon: hvacIcon}).bindPopup("HVAC Upgraded Building: Bock labs" + "<br>" + "<a href='http://sustainability.wisc.edu/history/' target='_blank' >More Details</a>"),
@@ -126,7 +126,7 @@ var hvac1 = L.marker([43.075979, -89.422589], {icon: hvacIcon}).bindPopup("HVAC 
     HVAC = L.layerGroup([hvac1,hvac2,hvac3,hvac4,hvac5,hvac6,hvac7,hvac8]);
 
 // roofGarden
-var roofGardenIcon = new MarkerIcon({iconUrl: "img/roofgarden.png"});
+var roofGardenIcon = new MarkerIcon({iconUrl: "img/sustainability-map/roofgarden.png"});
 
 var roof1 = L.marker([43.076184, -89.397765], {icon: roofGardenIcon}).bindPopup("FH King green roof at Pyle Center" + "<br>" + "<a href='https://allencentennialgarden.org/explore_blog.php?id=53' target='_blank' >More Details</a>"),
     roof2 = L.marker([43.075749, -89.412105], {icon: roofGardenIcon}).bindPopup("Microbial Sciences Green Roofs" + "<br>" + "<a href='https://allencentennialgarden.org/explore_blog.php?id=53' target='_blank' >More Details</a>"),
@@ -136,7 +136,7 @@ var roof1 = L.marker([43.076184, -89.397765], {icon: roofGardenIcon}).bindPopup(
     roofGarden = L.layerGroup([roof1,roof2,roof3,roof4,roof5]);
 
 // Garden plot
-var gardenIcon = new MarkerIcon({iconUrl: "img/gardenplot.png"});
+var gardenIcon = new MarkerIcon({iconUrl: "img/sustainability-map/gardenplot.png"});
 
 var garden1 = L.marker([43.087558, -89.432083], {icon: gardenIcon}).bindPopup("Eagle Heights Community Gardens" + "<br>" + "<a href='http://www.eagleheightsgardens.org/' target='_blank' >More Details</a>"),
     garden2 = L.marker([43.083008, -89.443748], {icon: gardenIcon}).bindPopup("University Community Gardens" + "<br>" + "<a href='http://www.eagleheightsgardens.org/' target='_blank' >More Details</a>"),
@@ -148,7 +148,7 @@ var garden1 = L.marker([43.087558, -89.432083], {icon: gardenIcon}).bindPopup("E
 */
 
 // bcycle
-var bcycleIcon = new MarkerIcon({iconUrl: "img/bcycle.png"});
+var bcycleIcon = new MarkerIcon({iconUrl: "img/sustainability-map/bcycle.png"});
 
 var bcycle1 = L.marker([43.075869, -89.433984], {icon: bcycleIcon}).bindPopup("Madison B-cycle Station – UW Children's Hospital" + "<br>" + "<a href='https://transportation.wisc.edu/transportation/bike_sharing.aspx' target='_blank' >More Details</a>"),
     bcycle2 = L.marker([43.076686,  -89.420300], {icon: bcycleIcon}).bindPopup("Madison B-cycle Station – Observatory Dr. @ Natatorium Gym" + "<br>" + "<a href='https://transportation.wisc.edu/transportation/bike_sharing.aspx' target='_blank' >More Details</a>"),
@@ -156,7 +156,7 @@ var bcycle1 = L.marker([43.075869, -89.433984], {icon: bcycleIcon}).bindPopup("M
     bcycle = L.layerGroup([bcycle1,bcycle2,bcycle3]);
 
 // bike lockers
-var bikeLockerIcon = new MarkerIcon({iconUrl: "img/bikelocker.png"});
+var bikeLockerIcon = new MarkerIcon({iconUrl: "img/sustainability-map/bikelocker.png"});
 
 var bLocker1 = L.marker([43.076897, -89.433650], {icon: bikeLockerIcon}).bindPopup("Bike locker at AFCH/Lot 63B (28 stalls)" + "<br>" + "<a href='https://transportation.wisc.edu/transportation/bike_paidparking.aspx' target='_blank' >More Details</a>"),
     bLocker2 = L.marker([43.075729, -89.410291], {icon: bikeLockerIcon}).bindPopup("Bike locker at Agriculture Hall (2 stalls)" + "<br>" + "<a href='https://transportation.wisc.edu/transportation/bike_paidparking.aspx' target='_blank' >More Details</a>"),
@@ -175,7 +175,7 @@ var bLocker1 = L.marker([43.076897, -89.433650], {icon: bikeLockerIcon}).bindPop
 var bikeLocker = L.layerGroup([bLocker1, bLocker2,bLocker3,bLocker4,bLocker5,bLocker6,bLocker7,bLocker8,bLocker9,bLocker10,bLocker11,bLocker12,bLocker13,bLocker14]);
 
 // bike cage
-var bikeCageIcon = new MarkerIcon({iconUrl: "img/bikecage.png"});
+var bikeCageIcon = new MarkerIcon({iconUrl: "img/sustainability-map/bikecage.png"});
 
 var bikeCage1 = L.marker([43.075634, -89.402260], {icon: bikeCageIcon}).bindPopup("MLot 10, Education (16 stalls)" + "<br>" + "<a href='https://transportation.wisc.edu/transportation/bike_paidparking.aspx' target='_blank' >More Details</a>"),
     bikeCage2 = L.marker([43.075732,  -89.409525], {icon: bikeCageIcon}).bindPopup("Lot 27, Nancy Nicholas Garage (18 stalls)" + "<br>" + "<a href='https://transportation.wisc.edu/transportation/bike_paidparking.aspx' target='_blank' >More Details</a>"),
@@ -183,7 +183,7 @@ var bikeCage1 = L.marker([43.075634, -89.402260], {icon: bikeCageIcon}).bindPopu
     bikeCage = L.layerGroup([bikeCage1, bikeCage2, bikeCage3]);
 
 // bike repair
-var bikeRepairIcon = new MarkerIcon({iconUrl: "img/bikeresource.png"});
+var bikeRepairIcon = new MarkerIcon({iconUrl: "img/sustainability-map/bikeresource.png"});
 
 var bikeRepair1 = L.marker([43.075634, -89.402260], {icon: bikeRepairIcon}).bindPopup("University Bicycle Resource Center: Hellen C. White Hall" + "<br>" + "<a href='https://transportation.wisc.edu/transportation/bike_annex.aspx' target='_blank' >More Details</a>"),
     bikeRepair2 = L.marker([43.073737,  -89.401157], {icon: bikeRepairIcon}).bindPopup("University Bike and Repair Center: Chardborne Residence Hall" + "<br>" + "<a href='https://transportation.wisc.edu/transportation/bike_annex.aspx' target='_blank' >More Details</a>"),
@@ -203,7 +203,7 @@ var bikeRepair1 = L.marker([43.075634, -89.402260], {icon: bikeRepairIcon}).bind
 * Waste Management
 */
 // Composting
-var compostIcon = new MarkerIcon({iconUrl: "img/compost.png"});
+var compostIcon = new MarkerIcon({iconUrl: "img/sustainability-map/compost.png"});
 
 var compost1 = L.marker([43.079622, -89.428863], {icon: compostIcon}).bindPopup("Campus Compost Bin: Parking Lot 76" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
     compost2 = L.marker([43.079763, -89.4263559], {icon: compostIcon}).bindPopup("Campus Compost Bin: Parking Lot 60" + "<br>" + "<a href='http://sustainability.wisc.edu/campus-composting/' target='_blank' >More Details</a>"),
@@ -216,8 +216,8 @@ var compost1 = L.marker([43.079622, -89.428863], {icon: compostIcon}).bindPopup(
     composting = L.layerGroup([compost1,compost2,compost3,compost4,compost5,compost6,compost7,compost8]);
 
 // Clothes Donation
-var recycleClothesIcon = new MarkerIcon({iconUrl: "img/recycleclothes.png"}),
-    recycleShoeIcon = new MarkerIcon({iconUrl: "img/shoe.png"});
+var recycleClothesIcon = new MarkerIcon({iconUrl: "img/sustainability-map/recycleclothes.png"}),
+    recycleShoeIcon = new MarkerIcon({iconUrl: "img/sustainability-map/shoe.png"});
 
 var clothes1 = L.marker([43.077098, -89.419928], {icon: recycleClothesIcon}).bindPopup("UW Clothing Drop-off Site: UW Natatorium" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
     clothes2 = L.marker([43.076833, -89.401450], {icon: recycleShoeIcon}).bindPopup(" Shoes Recycle: Helen C. White" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
@@ -226,7 +226,7 @@ var clothes1 = L.marker([43.077098, -89.419928], {icon: recycleClothesIcon}).bin
     recycleClothes = L.layerGroup([clothes1,clothes2,clothes3]);
 
 // Recycle Electronics
-var eWasteIcon = new MarkerIcon({iconUrl: "img/recycleelectronic.png"});
+var eWasteIcon = new MarkerIcon({iconUrl: "img/sustainability-map/recycleelectronic.png"});
 
 var eWaste1 = L.marker([43.071999, -89.407822], {icon: eWasteIcon}).bindPopup("Located below the main staircase. Acceptable Recyclables:Ink Cartridges, Batteries (any types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='http://sustainability.wisc.edu/commonly-trashed-recyclables/' target='_blank' >More Details</a>"),
     eWaste2 = L.marker([43.071763, -89.410302], {icon: eWasteIcon}).bindPopup("Located in loading dock. (soon to be moved)Acceptable Recyclables: Ink Cartridges, Batteries (all types), Cell Phones, Media (CD's, VHS, DVD, etc.), Small E-Waste" + "<br>" + "<a href='' target='_blank' >More Details</a>"),
@@ -248,7 +248,7 @@ var eWaste1 = L.marker([43.071999, -89.407822], {icon: eWasteIcon}).bindPopup("L
     eWaste = L.layerGroup([eWaste1,eWaste2,eWaste3, eWaste4,eWaste5,eWaste6,eWaste7,eWaste8,eWaste9,eWaste10,eWaste11,eWaste12,eWaste13,eWaste14,eWaste15,eWaste16,eWaste17]);
 
 // Recycle styrofoam
-var styrofoamIcon = new MarkerIcon({iconUrl: "img/styrofoam.png"});
+var styrofoamIcon = new MarkerIcon({iconUrl: "img/sustainability-map/styrofoam.png"});
 
 var styrofoam1 = L.marker([43.076271, -89.415253], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Animal Science Building" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
     styrofoam2 = L.marker([43.075008, -89.413589], {icon: styrofoamIcon}).bindPopup("Styrofoam Reuse and Recycling: Babcock Hall" + "<br>" + "<a href='http://sustainability.wisc.edu/styrofoam/' target='_blank' >More Details</a>"),
@@ -274,22 +274,22 @@ var styrofoam1 = L.marker([43.076271, -89.415253], {icon: styrofoamIcon}).bindPo
     styrofoam = L.layerGroup([styrofoam1,styrofoam2,styrofoam3, styrofoam4,styrofoam5,styrofoam6,styrofoam7,styrofoam8,styrofoam9,styrofoam10,styrofoam11,styrofoam12,styrofoam13,styrofoam14,styrofoam15,styrofoam16,styrofoam17, styrofoam18, styrofoam19, styrofoam20, styrofoam21]);
 
 // SWAP
-var swapIcon = new MarkerIcon({iconUrl: "img/swap.png"});
+var swapIcon = new MarkerIcon({iconUrl: "img/sustainability-map/swap.png"});
 
 var swap = L.marker([42.969385, -89.505466], {icon: swapIcon}).bindPopup("UW SWAP Shop: a multi-faceted surplus property disposal operation that serves all University of Wisconsin-Madison departments, UW System Schools, Municipalities and State of Wisconsin agencies." + "<br>" + "<a href='http://swap.wisc.edu/map.htm' target='_blank' >More Details</a>");
 
 // We Trade
-var weTradeIcon = new MarkerIcon({iconUrl: "img/wetrade.png"});
+var weTradeIcon = new MarkerIcon({iconUrl: "img/sustainability-map/wetrade.png"});
 
 var weTrade = L.marker([43.071709, -89.406620], {icon: weTradeIcon}).bindPopup("We-Trade: Computer Sciences and Statistics" + "<br>" + "<a href='https://techstore.wisc.edu/trade-up/' target='_blank' >More Details</a>");
 
 // Disposal Services (EHS)
-var disposalIcon = new MarkerIcon({iconUrl: "img/chemical.png"});
+var disposalIcon = new MarkerIcon({iconUrl: "img/sustainability-map/chemical.png"});
 
 var disposal = L.marker([43.068759, -89.399734], {icon: disposalIcon}).bindPopup("Chemical Disposal/Surplus Pickup & Animal Tissue Pickup" + "<br>" + "<a href='http://www.ehs.wisc.edu/disposalservices.htm' target='_blank' >More Details</a>");
 
 // Recyclopedia (EHS)
-var recyclopediaIcon = new MarkerIcon({iconUrl: "img/recyclopedia.png"});
+var recyclopediaIcon = new MarkerIcon({iconUrl: "img/sustainability-map/recyclopedia.png"});
 
 var recyclopedia = L.marker([43.068759, -89.399734], {icon: recyclopediaIcon}).bindPopup("Guidelines for Unwanted Material Disposal" + "<br>" + "<a href='http://www.ehs.wisc.edu/recyclopedia.htm' target='_blank' >More Details</a>");
 
@@ -297,7 +297,7 @@ var recyclopedia = L.marker([43.068759, -89.399734], {icon: recyclopediaIcon}).b
 /**
 * Education
 */
-var educationIcon = new MarkerIcon({iconUrl: "img/education.png"});
+var educationIcon = new MarkerIcon({iconUrl: "img/sustainability-map/education.png"});
 var education1 = L.marker([43.075926, -89.401037], {icon: educationIcon}).bindPopup("Sustainability Certificate from Nelson Institute for Environmental Studies" + "<br>" + "<a href='https://nelson.wisc.edu/undergraduate/sustainability-certificate/index.php' target='_blank' >More Details</a>"),
     education2 = L.marker([43.072880, -89.401874], {icon: educationIcon}).bindPopup("Certificate in Business, Environment & Social Responsibility from School of Buisness" + "<br>" + "<a href='https://bus.wisc.edu/mba/current-students/certificate-programs/sustainability' target='_blank' >More Details</a>"),
     education = L.layerGroup([education1, education2]);
