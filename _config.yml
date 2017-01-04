@@ -1,5 +1,10 @@
 gems:
   - jekyll-seo-tag
+title: "Teng Heong Ng's Portfolio"
 description: "This is my professional portfolio"
+url: tengheong.github.io
+author: Teng Heong Ng
 social:
+  name: Teng Heong Ng
   links:
+    - https://www.linkedin.com/in/tengheongng
